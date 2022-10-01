@@ -1,26 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply bg-black;
   }
+}
+
+@layer components {
+  .hover-animation {
+    @apply hover:bg-gray-200 hover:bg-opacity-10 rounded-full cursor-pointer w-14 h-14 xl:w-auto xl:h-auto xl:py-3 xl:px-4 transition duration-200 ease-out;
+  }
+
+  .icon {
+    @apply cursor-pointer w-9 h-9 hover:bg-blue-500 hover:bg-opacity-10 flex items-center justify-center rounded-full transition ease-out;
+  }
+}
+
+em-emoji-picker {
+  position: absolute;
+  max-width: 320px;
+  border-radius: 20px;
+  margin-left: -80px;
+  margin-top: 20px;
 }

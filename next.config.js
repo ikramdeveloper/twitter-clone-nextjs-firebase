@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ["rb.gy", "icon-library.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
